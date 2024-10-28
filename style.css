@@ -1,0 +1,408 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+/*home bg img*/
+#home {
+    background-image: url("https://res.cloudinary.com/djxpoufdk/image/upload/v1727183716/WhatsApp_Image_2024-09-24_at_6.44.55_PM_jbtsr2.jpg"); /* Replace with the actual URL of your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Set the height to fill the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    text-align: left; /* Center the logo */
+      /* Add some space above and below */
+}
+
+/* Navigation Bar */
+/* Ensure the header takes full width */
+/* General header styling */
+header {
+    width: 100%;                  /* Full width */
+    background-color: black;       /* Background color for header */
+    padding: 10px 20px;            /* Padding around the header */
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;                 /* Flexbox layout */
+    justify-content: space-between; /* Logo on left, nav on right */
+    align-items: center;           /* Center items vertically */
+}
+
+/* Logo styling */
+.logo {
+    flex: 1;                       /* Take space on the left side */
+}
+
+.logo img {
+    max-width: 200px;              /* Logo size */
+    height: auto;
+}
+
+/* Navigation menu styling */
+ul#sidemenu {
+    list-style: none;              /* Remove default bullet points */
+    display: flex;                 /* Display links horizontally */
+    gap: 20px;                     /* Space between the links */
+    margin: 0;                     /* Reset margin */
+    padding: 0;                    /* Reset padding */
+}
+
+/* Navigation menu items styling */
+ul#sidemenu li {
+    display: inline-block;
+}
+
+ul#sidemenu li a {
+    color: white;                  /* White text for the nav links */
+    text-decoration: none;         /* Remove underline from links */
+    padding: 10px 15px;            /* Add padding around links */
+    font-size: 16px;               /* Font size for nav links */
+}
+
+/* Hamburger menu for small screens */
+.fa-bars {
+    display: none;                 /* Hide by default */
+}
+
+/* Close icon styling */
+.fa-xmark {
+    display: none;                 /* Close icon hidden by default */
+}
+
+/* Media query for responsive navigation on smaller screens */
+@media (max-width: 768px) {
+    /* Show the hamburger menu on small screens */
+    .fa-bars {
+        display: inline-block;
+    }
+
+    /* Hide the menu links by default on small screens */
+    ul#sidemenu {
+        display: none;
+        flex-direction: column;    /* Stack links vertically on small screens */
+        position: absolute;        /* Position menu absolute */
+        top: 100%;                 /* Below the header */
+        right: 0;                  /* Align to the right side */
+        background-color: black;   /* Background color for the dropdown */
+        width: 200px;              /* Adjust width for dropdown menu */
+    }
+
+    /* Show the close icon when the menu is opened */
+    ul#sidemenu.show {
+        display: flex;
+    }
+
+    /* Show the close icon */
+    .fa-xmark {
+        display: inline-block;
+    }
+}
+
+/* Styling for the logo */
+.logo img {
+    width: 80px;  /* Adjust size of the logo */
+    height: auto; /* Keep the aspect ratio */
+}
+
+/* Styling for the navigation menu */
+nav {
+    display: flex;             /* Layout navigation items in a row */
+    justify-content: flex-end; /* Make sure the nav goes to the right */
+    width: auto;               /* Ensure the nav only takes the space it needs */
+    gap: 20px;                 /* Space between the navigation links */
+}
+
+/* Styling for individual navigation links */
+nav a {
+    color: white;              /* Text color for nav links */
+    text-decoration: none;     /* Remove underline from nav links */
+    font-size: 16px;           /* Adjust font size */
+    padding: 10px 15px;        /* Add padding around each link */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 22px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 18px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #ff0000;
+}
+
+/* Sections */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+#home {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+
+/* General form styling */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 20px; /* Space between the images */
+    justify-items: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    margin-top: 20px;
+}
+
+.event-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    /* For tablet and mobile devices, reduce to 2 images per row */
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    /* For smaller mobile screens, show 1 image per row */
+    .image-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* founders styling */
+/* Founders Section Styling */
+.founders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.founder-box {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    text-align: center;
+    padding: 15px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.founder-box img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.founder-box .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.founder-box .contact {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+.founder-box:hover {
+    background-color: #ff0000;
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
+    color: #fff;
+}
+
+.founder-box:hover .name, .founder-box:hover .contact {
+    color: #fff;
+}
+
+/* Form input styling */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.input-field:hover {
+    border-color: #555;
+}
+
+/* Submit button styling */
+.donor-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donor-button:hover {
+    background-color: red;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.5);
+}
+
+.donor-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(255, 0, 0, 0.3);
+}
+
+/* Styling the form label */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Centering the form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Form Styling */
+/* General form styling */
+
+
+/* Form input, select, and textarea styling */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+.form-container {
+    width: 100%;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.form-container iframe {
+    width: 100%;
+    height: 100vh; /* Full height on mobile */
+    min-height: 600px; /* Minimum height for larger screens */
+    border: none;
+}
+
+
+/* Textarea-specific styling */
+.textarea-field {
+    min-height: 120px; /* Adjust the height of the textarea */
+    resize: vertical; /* Allow users to resize the textarea */
+}
+
+/* Input focus effect */
+.input-field:focus {
+    border-color: #fd0505; /* Change border to blue on focus */
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.762); /* Soft glow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Input hover effect */
+.input-field:hover {
+    border-color: #555; /* Slightly darker border on hover */
+}
+
+/* Submit button styling */
+.contact-button {
+    background-color: #ff0000; /* Initial blue color */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%; /* Button takes full width */
+}
+
+/* Submit button hover effect */
+.contact-button:hover {
+    background-color: black;
+    transform: translateY(-3px); /* Lift button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow when hovered */
+}
+
+/* Submit button active effect */
+.contact-button:active {
+    background-color: #444; /* Darker shade on click */
+    transform: translateY(1px); /* Slight push down on click */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slight shadow reduction */
+}
+
+/* Form label styling */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Darker color for labels */
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
